@@ -15,7 +15,7 @@ const create = async (req, res) => {
         })
         if (response) {
             return res.status(201).send({
-                link: process.env.SERVER_URL + "/r/" + response._id
+                short_link: process.env.SERVER_URL + "/r/" + response._id
             })
         }
         const uid = get_uuid()
@@ -30,7 +30,7 @@ const create = async (req, res) => {
                 })
                 if (response._id == uid) {
                     return res.status(201).send({
-                        link: process.env.SERVER_URL + "/r/" + uid
+                        short_link: process.env.SERVER_URL + "/r/" + uid
                     })
                 } else {
                     return res.status(500).send({

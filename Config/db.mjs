@@ -3,7 +3,7 @@ import env from "dotenv"
 
 env.config()
 
-const dbName = process.env.MONGODB_NAME
+const dbName = process.env.MONGODB_DB_NAME
 
 export const setConnection = async (url) => {
     try {
